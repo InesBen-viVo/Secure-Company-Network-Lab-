@@ -120,7 +120,7 @@ Secure-Company-Network-Lab/
 
 ## 📚 Academic Context
 
-This lab was developed as a **Bachelor's thesis project** at INSIM (Mediterranean Institute of Management), Blida, Algeria. It demonstrates the application of enterprise network security principles to a real-world telecommunications operator context.
+This lab was developed as a **Bachelor's thesis project** at INSIM (Mediterranean Institute of Management), Constantine, Algeria. It demonstrates the application of enterprise network security principles to a real-world telecommunications operator context.
 
 ---
 
