@@ -1,6 +1,6 @@
 # 🛡️ Secure-Company-Network-Lab
 
-> **Bachelor Thesis Lab** — Design and Implementation of a Secure Network Infrastructure for Algérie Télécom  
+> **Bachelor Thesis Lab** — Design and Implementation of a Secure Network Infrastructure for Cyber Pro
 > **Author:** Bendib Ines | **Institution:** INSIM | **Year:** 2024–2025  
 
 ---
@@ -23,7 +23,7 @@ Secure-Company-Network-Lab/
 
 | # | Objective |
 |---|---|
-| 1 | Design a hierarchical secure network for a telecom enterprise |
+| 1 | Design a hierarchical secure network for a Cyber Pro enterprise |
 | 2 | Segment traffic using VLANs (Management, LAN, WLAN, VoIP, DMZ) |
 | 3 | Configure Cisco ASA dual-firewall with DMZ zone architecture |
 | 4 | Implement OSPF dynamic routing across all devices |
