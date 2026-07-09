@@ -1,4 +1,4 @@
-# 🔍 Reconnaissance — Algérie Télécom Network Lab
+# 🔍 Reconnaissance — Cyber Pro Network Lab
 
 **Lab:** Design and Implementation of a Secure Company Network System  
 **Author:** Bendib Ines  
@@ -10,127 +10,344 @@
 
 ## 1. Target Organization Overview
 
-**Algérie Télécom Group** is an Algerian public economic enterprise operating in the telecommunications sector. Its primary objective is the implementation, coordination, and supervision of major telecommunications projects across Algeria.
+**Cyber Pro Group** company is committed to strengthening cybersecurity, with a focus on malware analysis,
+IoT security, strategic consulting, training, and research. By combining advanced technical
+solutions with proactive defense mechanisms, it aims to anticipate and mitigate cyber threats
+before they cause harm.
 
-- **Founded:** November 9, 2017 (formally structured)  
-- **Type:** Joint-stock public enterprise  
-- **Sector:** Telecommunications (fixed, mobile, satellite, fiber optics)  
+# Cyber Pro
 
-### 1.1 Subsidiaries
-| Subsidiary | Role |
-|---|---|
-| Algérie Télécom (AT) | Fixed telephony, broadband, wireless |
-| Algérie Télécom Mobile (Mobilis) | Mobile and wireless high-speed internet |
-| Algérie Télécom Satellite (ATS) | Satellite telecommunications |
-| Algérie Télécom Europe (ATE) | Manages submarine cable ORVAL/ARVAL (DZ–Europe) |
-| COMINTAL | Dark fiber optic raw solutions |
-| SATICOM | Modern IT communication solutions for enterprises |
+## Overview
+
+- **Founded:** Cybersecurity company specializing in malware analysis and IoT security
+- **Type:** Private Cybersecurity Company
+- **Industry:** Cybersecurity & Internet of Things (IoT) Security
+- **Core Activities:** Malware Analysis, IoT Security, Security Consulting, Training, Research & Development
 
 ---
 
-## 2. Network Infrastructure Reconnaissance
+# 1. Company Missions
 
-### 2.1 External Network
+Cyber Pro is dedicated to protecting organizations against cyber threats, with a particular focus on IoT environments and malware analysis.
 
-Algeria Telecom's external network covers all physical and logical interconnections between Algeria and the global telecommunications infrastructure.
+## 1.1 Malware Analysis
 
-**Key capabilities:**
-- Global internet access for Algerian users
-- Traffic redundancy and resilience (link failover)
-- International transit of governmental, commercial, and personal data
-- Integration into global DNS, exchange points, and cloud infrastructure
+### Activities
 
-#### Submarine Fiber Optic Cables
+- Malware collection using honeypots and threat intelligence sources
+- Static analysis of malicious code
+- Dynamic analysis using sandbox environments
+- Reverse engineering of malware samples
+- Threat intelligence reporting and IOC generation
 
-| Cable | Landing (DZ) | Main Link | Capacity | Status |
-|---|---|---|---|---|
-| SEA-ME-WE-4 | Annaba | France – Asia – Middle East – Africa | >1.28 Tbps | Active (since 2005) |
-| Medex | Algiers | Marseille, France | Multi-Tb | Active (2022) |
-| Orval/Alval | Oran / Algiers | Valence, Spain | 20 Tbps | Active (2021) |
-| SMW-5 (planned) | Algiers / Skikda | Europe – Asia – Africa | >36 Tbps | Under study |
+### Tools & Technologies
 
-**Technical characteristics of submarine links:**
-- Latency < 50 ms to Europe
-- Path redundancy via multiple entry/exit points
-- Scalable bandwidth using DWDM
-- Automatic traffic rerouting on cable cuts
-
-### 2.2 Internal Network Architecture
-
-Algeria Telecom's internal infrastructure follows a **three-tier hierarchical architecture**:
-
-```
-┌─────────────────────────────────────────────────────┐
-│              National Backbone (Core)               │
-│         Ultra high-speed fiber > 100 Gbps           │
-│    Connects wilayas, cities, regional data centers  │
-└───────────────────┬─────────────────────────────────┘
-                    │
-┌───────────────────▼─────────────────────────────────┐
-│           Aggregation Network Layer                  │
-│     DSLAM, OLT links to subscriber areas            │
-└───────────────────┬─────────────────────────────────┘
-                    │
-┌───────────────────▼─────────────────────────────────┐
-│         Access Network (Last Mile)                   │
-│  ADSL, VDSL, FTTH, 4G LTE, GPON/EPON               │
-└─────────────────────────────────────────────────────┘
-```
-
-#### Transmission Technologies
-
-| Technology | Use | Throughput |
-|---|---|---|
-| SDH/SONET | Legacy base networks | Up to 10 Gbps |
-| DWDM | Optical multiplexing in backbone | > 400 Gbps/cable |
-| MPLS | Multiprotocol IP transport | QoS + prioritization |
-| Metro Ethernet | Regional aggregation | 1 to 100 Gbps |
-
-#### Customer Access Technologies
-
-| Technology | Type | Area Served | Throughput |
-|---|---|---|---|
-| ADSL/VDSL | Copper | Urban/dense areas | 10 – 50 Mbps |
-| FTTH | Fiber | Urban areas | > 100 Mbps |
-| LTE 4G Fixed | Wireless (SIM) | Rural areas | 10 – 40 Mbps |
-| WiMAX (legacy) | Point-to-multipoint radio | Remote sites | 1 – 5 Mbps |
-
-### 2.3 Data Centers & NOC
-
-| Site | Role |
-|---|---|
-| Algiers (Bir Mourad Raïs) | Primary national DC, cloud services |
-| Oran | Regional DC |
-| Constantine | Regional DC |
-
-- **Monitoring:** National NOC (Network Operations Center), SNMP, NetFlow
-- **Security Stack:** Arbor, Fortinet, Cisco Secure, SIEM + IDS/IPS
+| Category | Examples |
+|-----------|-----------|
+| Sandboxing | Cuckoo Sandbox |
+| Analysis Tools | Wireshark, IDA Pro, Ghidra |
+| Threat Intelligence | IOC Databases |
+| Monitoring | SIEM Platforms |
 
 ---
 
-## 3. Security Threat Landscape (Recon Phase)
+## 1.2 IoT Security
 
-### 3.1 External Threat Vectors Identified
+### Services
 
-- DDoS attacks from international sources
-- Optical wiretapping on submarine cables
-- BGP hijacking attacks
-- Malicious/accidental submarine cable cuts
+- IoT Security Audits
+- Vulnerability Assessments
+- Secure Firmware Updates
+- Device Authentication
+- Network Segmentation
+- Real-Time Monitoring
 
-### 3.2 Internal Threat Vectors Identified
+### Security Mechanisms
 
-- Unauthorized access to network equipment
-- Internal attacks / insider threats
-- Traffic capture and analysis (Wireshark, tcpdump-based)
-- Misconfigured services and default configurations
+| Mechanism | Purpose |
+|------------|------------|
+| Digital Certificates | Device Authentication |
+| IoT Firewalls | Traffic Filtering |
+| Network Segmentation | Attack Containment |
+| OTA Updates | Secure Firmware Deployment |
+| AI Detection | Threat Monitoring |
 
-### 3.3 Security Countermeasures in Place
+---
 
-- Anti-DDoS protection at network edge
-- L2/L3/L7 encryption for sensitive flows (government traffic)
-- Continuous monitoring from Security Operations Center (SOC)
-- SIEM + IDS/IPS integration
-- Tools: Arbor, Fortinet, Cisco Secure
+## 1.3 Security Consulting
+
+### Consulting Services
+
+- Risk Assessment
+- Security Policy Development
+- Regulatory Compliance
+- Penetration Testing
+- Incident Response Planning
+- Crisis Management
+
+### Compliance Standards
+
+- ISO 27001
+- GDPR
+- NIS2
+
+---
+
+## 1.4 Training & Awareness
+
+### Training Programs
+
+- Malware Analysis
+- IoT Security
+- Network Security
+- Incident Response
+- Ethical Hacking Fundamentals
+
+### Tools Covered
+
+- Wireshark
+- Metasploit
+- Burp Suite
+- Nmap
+
+---
+
+## 1.5 Research & Development
+
+### Research Areas
+
+- IoT Botnet Analysis
+- Artificial Intelligence for Cybersecurity
+- Cloud Security Platforms
+- Threat Detection Automation
+- Security Protocol Development
+
+### Partnerships
+
+- Universities
+- Research Laboratories
+- Industry Partners
+
+---
+
+# 2. Strategic Objectives
+
+## Security Objectives
+
+- Protect IoT devices from cyber threats
+- Improve malware detection capabilities
+- Secure sensitive information
+- Increase client resilience
+
+## Innovation Objectives
+
+- Integrate AI into cybersecurity operations
+- Develop advanced threat detection systems
+- Build scalable cloud security solutions
+
+## Business Objectives
+
+- Strengthen company reputation
+- Expand cybersecurity services
+- Increase operational efficiency
+
+---
+
+# 3. IT Department
+
+## Main Missions
+
+- Infrastructure Management
+- Cybersecurity Operations
+- Technology Innovation
+- Internal Support Services
+
+---
+
+## 3.1 Human Resources
+
+| Position | Responsibilities |
+|-----------|------------------|
+| IT Project Manager | Coordinates technology projects |
+| IoT Specialist | Designs and secures IoT systems |
+| Cybersecurity Analyst | Threat detection and incident response |
+
+---
+
+## 3.2 Hardware Resources
+
+| Resource | Purpose |
+|------------|------------|
+| Dedicated Analysis Servers | Malware Analysis |
+| IoT Test Devices | Security Testing |
+| Virtualization Platforms | Attack Simulation |
+| Secure Network Equipment | Infrastructure Protection |
+
+---
+
+## 3.3 Software Resources
+
+| Software | Purpose |
+|------------|------------|
+| Cuckoo Sandbox | Malware Analysis |
+| Node-RED | IoT Development |
+| SIEM Solutions | Log Analysis |
+| IDS/IPS Systems | Intrusion Detection |
+
+---
+
+# 4. Information Flow
+
+## Input
+
+### Data Sources
+
+- IoT Device Logs
+- Threat Reports
+- Network Monitoring Data
+- Security Events
+
+---
+
+## Processing
+
+### Analysis Methods
+
+- Sandbox Execution
+- AI-Based Detection
+- Threat Correlation
+- Analyst Investigation
+
+---
+
+## Output
+
+### Deliverables
+
+- Threat Analysis Reports
+- Security Recommendations
+- Incident Reports
+- Remediation Plans
+
+---
+
+# 5. Document Management
+
+## Classification
+
+| Category | Examples |
+|------------|------------|
+| Internal | Policies and Procedures |
+| Client | Audit Reports |
+| Research | Technical Studies |
+
+---
+
+## Access Control
+
+- Identity and Access Management (IAM)
+- Role-Based Access Control (RBAC)
+- Audit Logging
+
+---
+
+## Archiving Policy
+
+| Document Type | Retention Period |
+|---------------|-----------------|
+| Client Documents | 5 Years |
+| Internal Documents | 10 Years |
+
+---
+
+## Security Controls
+
+- AES-256 Encryption
+- Daily Backups
+- Redundant Storage
+- Secure Remote Archives
+
+---
+
+# 6. Identified Challenges
+
+## Security Issues
+
+- Missing ACL configurations
+- Weak authentication controls
+- Firewall misconfiguration
+
+## Network Issues
+
+- Poor VLAN segmentation
+- Missing Inter-VLAN Routing
+- Lack of redundancy
+
+## Management Issues
+
+- No configuration backups
+- Insufficient auditing
+- Weak access control
+
+## Advanced Threat Protection Gaps
+
+- No Dynamic ARP Inspection
+- No VLAN Hopping Protection
+- No VPN Infrastructure
+
+---
+
+# 7. Project Objectives
+
+## Primary Objective
+
+Design and implement a secure, scalable, and high-performance network infrastructure for Cyber Pro.
+
+---
+
+## Security Enhancements
+
+- Cisco ASA Firewall Deployment
+- VPN Implementation
+- Security Policy Enforcement
+- Access Control Improvements
+
+---
+
+## Network Enhancements
+
+- VLAN Segmentation
+- Inter-VLAN Routing
+- EtherChannel Deployment
+- HSRP Redundancy
+- BGP Routing
+
+---
+
+## Future Readiness
+
+- IPv6 Adoption
+- Network Scalability
+- Staff Training
+- Documentation Management
+
+---
+
+## Secure Connectivity
+
+- Site-to-Site VPN
+- Remote Access VPN
+- IPSec Protection
+- NAT Security
+
+---
+
+## Network Management
+
+- Automated Configuration Backups
+- Centralized Management
+- Monitoring and Alerting
+- Operational Automation
 
 ---
 
@@ -138,7 +355,7 @@ Algeria Telecom's internal infrastructure follows a **three-tier hierarchical ar
 
 The goal of this practical lab is to:
 
-1. Design a **secure, hierarchical network** for Algérie Télécom
+1. Design a **secure, hierarchical network** for Cyber Pro
 2. Implement **VLAN segmentation** for traffic isolation
 3. Configure **Cisco ASA firewalls** with strict DMZ policies
 4. Deploy **OSPF dynamic routing** and **HSRP high availability**
